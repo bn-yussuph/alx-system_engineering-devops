@@ -2,6 +2,7 @@
 
 package { 'install flask':
   command => 'pip3 install flask==2.1.0',
-  path => '/ussr/bin/',
-  unless => 'pip3 list | grep flask',
+  path    => '/ussr/bin/',
+  ensure  => 'created',
+  unless  => 'pip3 list | grep flask',
 }
